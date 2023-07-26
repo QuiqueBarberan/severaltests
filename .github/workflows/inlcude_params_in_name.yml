@@ -1,0 +1,29 @@
+name: Workflow_name
+run-name: i1:${{ inputs.i1 }}, i2:${{ inputs.i2 }}, i1:${{ inputs.i3 }}
+on:
+  workflow_dispatch:
+    inputs:
+      i1:
+        description: 'Input1Str'
+        required: false
+        default: '1'
+        type: string
+      i2:
+        description: 'Input2Str'
+        required: false
+        default: '2'
+        type: string
+      i3:
+        description: 'i3Choice'
+        required: true
+        options:
+          - Choice1
+          - Choice2
+        type: choice
+        default: 'Choice1'
+jobs:
+  Job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run1
+        run: echo 'Nada'
