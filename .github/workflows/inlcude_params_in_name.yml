@@ -1,5 +1,5 @@
-name: Workflow_name
-run-name: ${{ join(inputs.*, ', ') }}
+name: Workflow Name
+run-name: Inputs:${{ join(inputs.*, ', ') }} by ${{ github.actor }}
 on:
   workflow_dispatch:
     inputs:
