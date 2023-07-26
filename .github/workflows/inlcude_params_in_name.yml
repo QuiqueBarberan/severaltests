@@ -1,5 +1,5 @@
 name: Workflow Name
-run-name: ${{ toJSON(inputs.*) }}
+run-name: ${{ toJSON(inputs.*.description,inputs.*) }}
 on:
   workflow_dispatch:
     inputs:
