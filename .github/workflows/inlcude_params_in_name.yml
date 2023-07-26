@@ -1,5 +1,5 @@
 name: Workflow_name
-run-name: i1:${{ inputs.i1 }}, i2:${{ inputs.i2 }}, i1:${{ inputs.i3 }}
+run-name: i1:${{ inputs.i1 }}, i2:${{ inputs.i2 }}, i1:${{ inputs.i3 }} by actor:${{ github.actor }}
 on:
   workflow_dispatch:
     inputs:
