@@ -1,5 +1,5 @@
 name: Workflow_name
-run-name: ${{ join(inputs.*.name, ', ') }}
+run-name: ${{ join(inputs.*, ', ') }}
 on:
   workflow_dispatch:
     inputs:
