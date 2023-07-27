@@ -1,4 +1,4 @@
-name: Workflow Name
+name: GitHub Params
 run-name: Inputs:${{ toJSON(inputs.*) }}
 on:
   workflow_dispatch:
