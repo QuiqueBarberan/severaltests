@@ -1,0 +1,11 @@
+name: Workflow Name
+run-name: Inputs:${{ toJSON(inputs.*) }}
+on:
+  workflow_dispatch:
+
+jobs:
+  Job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ${{ github.base_ref || github.ref_name }}
+        run: echo 'Nada'
