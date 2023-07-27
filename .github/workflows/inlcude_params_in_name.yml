@@ -1,4 +1,4 @@
-name: Workflow Name
+name: inlcude params in name
 run-name: Inputs:${{ toJSON(inputs.*) }}
 on:
   workflow_dispatch:
