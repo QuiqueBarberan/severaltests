@@ -1,0 +1,14 @@
+name: Workflow for call
+on:
+  workflow_dispatch:
+jobs:
+  Job-forNothing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+
+
+  Workflow-outside:
+    uses: QuiqueBarberan/load-custom-vars/.github/workflows/blank.yml@master
+    needs: Job-forNothing
